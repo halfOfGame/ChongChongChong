@@ -7,20 +7,17 @@ package book.chapter1;
 
 
 public class SleepInterruptTest {
-    public static void main(String[] args) throws InterruptedException{
-        Thread threadOne = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("threadOne begin sleep for 2000 seconds");
-                try {
-                    Thread.sleep(2000000);
-                    System.out.println("threadOne awaking");
-                } catch (InterruptedException e) {
-                    System.out.println("threadOne is interrupted while sleeping");
-                    return;
-                }
-                System.out.println("threadOne-leaving normally");
+    public static void main(String[] args) throws InterruptedException {
+        Thread threadOne = new Thread(() -> {
+            System.out.println("threadOne begin sleep for 2000 seconds");
+            try {
+                Thread.sleep(2000000);
+                System.out.println("threadOne awaking");
+            } catch (InterruptedException e) {
+                System.out.println("threadOne is interrupted while sleeping");
+                return;
             }
+            System.out.println("threadOne-leaving normally");
         });
 
         //启动线程

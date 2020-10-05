@@ -9,6 +9,7 @@ package book.chapter1;
 
 
 public class YieldTest implements Runnable {
+
     public YieldTest() {
         Thread t = new Thread(this);
         t.start();

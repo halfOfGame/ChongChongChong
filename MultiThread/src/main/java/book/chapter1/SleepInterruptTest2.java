@@ -9,13 +9,10 @@ package book.chapter1;
 
 
 public class SleepInterruptTest2 {
-    public static void main(String[] args) throws InterruptedException{
-        Thread threadOne = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for (;;) {
-                    
-                }
+    public static void main(String[] args) throws InterruptedException {
+        Thread threadOne = new Thread(() -> {
+            for (; ; ) {
+
             }
         });
 

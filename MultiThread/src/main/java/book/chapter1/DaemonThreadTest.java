@@ -10,13 +10,11 @@ package book.chapter1;
 
 public class DaemonThreadTest {
     public static void main(String[] args) {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for(;;){
-
-                }
+        Thread thread = new Thread(() -> {
+            for(;;){
+                  System.out.println("Hello");
             }
+
         });
 
         //设置为守护线程
