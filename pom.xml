@@ -25,6 +25,8 @@
         <module>Mysql</module>
         <module>Redis</module>
         <module>SmallTools</module>
+        <module>PrincipleOfCompiling</module>
+        <module>AlgorithmsAndDataStructures</module>
     </modules>
 
 

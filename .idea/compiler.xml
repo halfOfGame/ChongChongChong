@@ -13,6 +13,7 @@
         <module name="NetworkProgramming" />
         <module name="DesignPatterns" />
         <module name="Redis" />
+        <module name="PrincipleOfCompiling" />
         <module name="Flume" />
         <module name="Spring" />
         <module name="SmallTools" />
@@ -22,6 +23,7 @@
         <module name="Mysql" />
         <module name="FunctionalProgramming" />
         <module name="Servlet" />
+        <module name="AlgorithmsAndDataStructures" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />
