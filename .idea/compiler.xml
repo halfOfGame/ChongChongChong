@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JVM" />
+        <module name="RPC" />
         <module name="Log" />
         <module name="IO" />
         <module name="Hadoop" />
+        <module name="Kafka" />
         <module name="NetworkProgramming" />
         <module name="DesignPatterns" />
         <module name="Redis" />
@@ -17,6 +19,7 @@
         <module name="Flume" />
         <module name="Spring" />
         <module name="SmallTools" />
+        <module name="DataWarehouseProject" />
         <module name="Test" />
         <module name="Zookeeper" />
         <module name="MultiThread" />

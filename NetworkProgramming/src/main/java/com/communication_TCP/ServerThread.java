@@ -26,10 +26,13 @@ public class ServerThread extends Thread {
                 loginMessage = "登录成功！！";
             else
                 loginMessage = "登录失败！！";
+            //告知客户端我已经写完了
             socket.shutdownInput();
+
             outputStream = socket.getOutputStream();
             dataOutputStream = new DataOutputStream(outputStream);
             dataOutputStream.writeUTF(loginMessage);
+
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

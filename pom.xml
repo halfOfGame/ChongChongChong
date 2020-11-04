@@ -27,6 +27,9 @@
         <module>SmallTools</module>
         <module>PrincipleOfCompiling</module>
         <module>AlgorithmsAndDataStructures</module>
+        <module>Kafka</module>
+        <module>DataWarehouseProject</module>
+        <module>RPC</module>
     </modules>
 
 

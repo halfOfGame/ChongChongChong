@@ -28,8 +28,9 @@ public class TestClient {
             outputStream = socket.getOutputStream();
             objectOutputStream = new ObjectOutputStream(outputStream);
             objectOutputStream.writeObject(user);
-
+            //告知服务器我已经写完了
             socket.shutdownOutput();
+
             inputStream = socket.getInputStream();
             dataInputStream = new DataInputStream(inputStream);
             System.out.println(dataInputStream.readUTF());

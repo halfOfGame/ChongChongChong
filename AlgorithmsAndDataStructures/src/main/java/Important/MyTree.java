@@ -113,6 +113,26 @@ public class MyTree {
         }
     }
 
+    public void inTraverseTree_Iteration_Improve(TreeNode head) {
+        if (head == null) {
+            return;
+        }
+        Deque<TreeNode> stack = new ArrayDeque();
+        stack.push(head);
+        while (!stack.isEmpty()) {
+            TreeNode topLeft = stack.peek().left;
+            while (topLeft != null) {
+                stack.push(topLeft);
+                topLeft = topLeft.left;
+            }
+            TreeNode tempNode = stack.pop();
+            System.out.print(tempNode.data + " ");
+            if (tempNode.right != null) {
+                stack.push(tempNode.right);
+            }
+        }
+    }
+
     //-------------------------------后序遍历-------------------------------------
     //递归后序遍历树
     public void postTraverseTree_Recursion(TreeNode head) {
@@ -155,9 +175,8 @@ public class MyTree {
 
     //-----------------------------层序遍历---------------------------------
 
-    /**按层次遍历树
-     *
-     *
+    /**
+     * 按层次遍历树
      */
     public void levelTraverseTree_Normal(TreeNode head) {
         Queue<TreeNode> queue = new LinkedList();
@@ -172,8 +191,9 @@ public class MyTree {
         }
     }
 
-    /**按层次遍历二叉树，并且打印出层次结构
-     *
+    /**
+     * 按层次遍历二叉树，并且打印出层次结构
+     * <p>
      * 每次循环都输出一层
      */
     public void levelTraverseTree_Special(TreeNode head) {
@@ -198,7 +218,6 @@ public class MyTree {
 
     /**
      * 返回p和q共同的祖先节点
-     *
      */
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root == p || root == q)
